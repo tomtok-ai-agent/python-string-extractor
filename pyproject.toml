@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-string-extractor"
+version = "0.1.0"
+description = "A tool to extract string literals from Python source code using AST analysis"
+authors = ["Ai Agent <agent@tomtok.io>"]
+readme = "README.md"
+packages = [{include = "python_string_extractor", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+extract-strings = "python_string_extractor.extractor:main"
